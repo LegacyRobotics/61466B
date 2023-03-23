@@ -1,0 +1,13 @@
+//Left Side Speed
+leftspeed = Controller1.Axis3.position() + Controller1.Axis1.position();
+
+//Right Side Speed
+rightspeed = Controller1.Axis3.position() - Controller1.Axis1.position();
+
+//Front Motors are their respective side speed, modified by the strafe axis for +
+flmspeed = leftspeed + Controller1.Axis4.position();
+frmspeed = rightspeed + Controller1.Axis4.position();
+
+//Back Motors are their respective side speed, modified by the strafe axis for -
+blmspeed = leftspeed - Controller1.Axis4.position();
+brmspeed = rightspeed - Controller1.Axis4.position();
